@@ -68,6 +68,7 @@ body {
   color: #fff;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 1.1em;
 }
 
 .btn:hover {
