@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <h1>Contact</h1>
-    <p><a href="mailto:contact@thebinaryguy.me">Let's get in touch!</a></p>
+    <p><a href="https://twitter.com/IAmTheBinaryGuy" target="_blank">Tweet: @IAmTheBinaryGuy</a></p>
   </div>
 </template>
 

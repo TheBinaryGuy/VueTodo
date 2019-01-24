@@ -44,7 +44,6 @@ input[type="text"], :focus {
     padding: 5px;
     border: none;
     margin-right: 10px;
-    margin-left: 10px;
     border-bottom: 1px solid slateblue;
     outline: none;
     font-size: 1.1em;
@@ -52,7 +51,5 @@ input[type="text"], :focus {
 
 input[type="submit"] {
     flex: 2;
-    margin-right: 10px;
-    margin-left: 10px;
 }
 </style>
