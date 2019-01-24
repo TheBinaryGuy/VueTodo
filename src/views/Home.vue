@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <AddTodo v-on:add-todo="addTodo" />
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <AddTodo v-on:add-todo="addTodo"/>
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
 
@@ -13,7 +13,8 @@ import Todos from "../components/Todos";
 export default {
   name: "Home",
   components: {
-    AddTodo, Todos
+    AddTodo,
+    Todos
   },
   data() {
     return {
@@ -22,27 +23,30 @@ export default {
   },
   methods: {
     deleteTodo(id) {
-      axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then(res => this.todos = this.todos.filter(todo => todo.id != id))
-      .catch(err => console.log(err));
+      axios
+        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(res => (this.todos = this.todos.filter(todo => todo.id != id)))
+        .catch(err => console.log(err));
     },
     addTodo(newTodo) {
       const { title, completed } = newTodo;
 
-      axios.post("https://jsonplaceholder.typicode.com/todos", {
-        title,
-        completed
-      })
-      .then(res => this.todos = [...this.todos, res.data])
-      .catch(err => console.log(err));
+      axios
+        .post("https://jsonplaceholder.typicode.com/todos", {
+          title,
+          completed
+        })
+        .then(res => (this.todos = [...this.todos, res.data]))
+        .catch(err => console.log(err));
     }
   },
   created() {
-    axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
-    .then(res => this.todos = res.data)
-    .catch(err => console.log(err));
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+      .then(res => (this.todos = res.data))
+      .catch(err => console.log(err));
   }
-}
+};
 </script>
 
 <style>
@@ -60,13 +64,13 @@ body {
 .btn {
   display: inline-block;
   border: none;
-  background-color: #555;
+  background-color: #000;
   color: #fff;
-  padding: 7px 20px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #666;
+  background-color: #000;
 }
 </style>

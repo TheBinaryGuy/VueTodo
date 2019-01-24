@@ -1,8 +1,8 @@
 <template>
     <div>
         <form @submit="addTodo">
-            <input type="text" v-model="title" name="title" placeholder="Add Todo">
-            <input type="submit" value="Submit" class="btn">
+            <input type="text" v-model="title" name="title" placeholder="What's on your mind?" autocomplete="off" autofocus>
+            <input type="submit" value="Add Todo" class="btn">
         </form>
     </div>
 </template>
@@ -36,14 +36,23 @@ export default {
 <style scoped>
 form {
     display: flex;
+    padding: 10px;
 }
 
-input[type="text"] {
+input[type="text"], :focus {
     flex: 10;
     padding: 5px;
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-bottom: 1px solid slateblue;
+    outline: none;
+    font-size: 1.1em;
 }
 
 input[type="submit"] {
     flex: 2;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 </style>
