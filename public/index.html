@@ -11,20 +11,28 @@
   <style>
     .float {
       position: fixed;
-      width: 200px;
+      width: calc(100vw - 10vw);
       height: 50px;
       bottom: 20px;
-      right: 50%;
-      left: calc(50% - 100px);
       border-radius: 10px;
       font-size: 1.1rem;
       background-color: #000;
-      color: #FFF;
-      box-shadow: 2px 2px 5px #999;
+      box-shadow: 0 0 5px #999;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: #FFF;
+    }
+
+    .float a {
+      color: rgb(0, 136, 255);
       text-decoration: none;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
@@ -34,7 +42,9 @@
     <strong>We're sorry but Todo App doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
   <div id="appContainer"></div>
-  <a href="#" class="float">&copy; 2019 TheBinaryGuy</a>
+  <div class="center">
+    <span class="float">&copy; 2019&nbsp;<a href="https://thebinaryguy.me" target="_blank">TheBinaryGuy</a></span>
+  </div>
   <!-- built files will be auto injected -->
 </body>
 
